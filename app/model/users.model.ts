@@ -12,12 +12,13 @@ module.exports = (sequelize: any, Sequelize: any) => {
     salt: {
       type: Sequelize.STRING
     },
-    // createTime: {
-    //   type: Sequelize.DATETIME
-    // },
-    // updateTime: {
-    //     type: Sequelize.DATETIME
-    // }
+    createTime: {
+      type: Sequelize.DATE
+    },
+    updateTime: {
+      type: Sequelize.DATE
+    }
   }, { freezeTableName: true, timestamps: false })
+  // freezeTableName 限制表名加s  timestamps 不自动查时间戳
   return Users
 }
