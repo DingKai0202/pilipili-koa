@@ -1,19 +1,17 @@
-const db = require('../model')
-const Users = db.users
+const { findAllUser } = require('../service/userService')
 
 
-exports.list = async(ctx: any) => {
-  console.log('数据库00');
-  Users.findAll().then((data: any) => {
-    console.log('数据库', data);
-    ctx.body({
-      code: 200,
-      data: data,
-    })
-  })
-  .catch((err: any) => {
-    throw err
-  })
+async function getAllUserCtl(ctx: any) {
+  const data = await findAllUser()
+  ctx.body = {
+    code: 200,
+    msg: '测试接口',
+    data
+  }
+}
+
+module.exports = {
+  getAllUserCtl
 }
 
 export{}

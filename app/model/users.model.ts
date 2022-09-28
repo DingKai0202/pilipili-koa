@@ -12,12 +12,12 @@ module.exports = (sequelize: any, Sequelize: any) => {
     salt: {
       type: Sequelize.STRING
     },
-    // createTime: {
-    //   type: Sequelize.DATETIME
-    // },
-    // updateTime: {
-    //     type: Sequelize.DATETIME
-    // }
+    createTime: {
+      type: Sequelize.DATE
+    },
+    updateTime: {
+      type: Sequelize.DATE
+    }
   }, { freezeTableName: true, timestamps: false })
   return Users
 }
