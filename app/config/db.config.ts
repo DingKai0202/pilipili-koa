@@ -1,8 +1,8 @@
 module.exports = {
-  HOST: 'localhost',
-  USER: 'root',
-  PASSWORD: '44512635',
-  DB: 'bilibili',
+  HOST: 'rm-2zei9gil46e2bcb5dto.mysql.rds.aliyuncs.com',
+  USER: 'ly',
+  PASSWORD: 'LYly123456',
+  DB: 'pilipili',
   dialect: 'mysql',
   pool: {
     max: 5,

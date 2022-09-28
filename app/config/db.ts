@@ -8,16 +8,16 @@ reconn()
 function reconn() {
   // create the connection to database
   connection = mysql.createConnection({
-    host: 'localhost',
+    host: 'rm-2zei9gil46e2bcb5dto.mysql.rds.aliyuncs.com',
     post: 3306,
-    user: 'root',
-    password: '44512635',
-    database: 'bilibili'
+    user: 'ly',
+    password: 'LYly123456',
+    database: 'pilipili'
   });
   connection.on('error', (err: any) => {
-      err.code === 'PROTOCOL_CONNECTION_LOST' && setTimeout(reconn, 2000)
+    err.code === 'PROTOCOL_CONNECTION_LOST' && setTimeout(reconn, 2000)
   })
 }
 
 module.exports = connection
-export {};
+export { };
