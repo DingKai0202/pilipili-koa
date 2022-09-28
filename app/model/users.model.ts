@@ -19,5 +19,6 @@ module.exports = (sequelize: any, Sequelize: any) => {
       type: Sequelize.DATE
     }
   }, { freezeTableName: true, timestamps: false })
+  // freezeTableName 限制表名加s  timestamps 不自动查时间戳
   return Users
 }
